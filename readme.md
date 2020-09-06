@@ -169,7 +169,7 @@ kosqi close <appId>
 Example Request
 
 ```
-kosqi launch com.garredow.foxcasts
+kosqi close com.garredow.foxcasts
 ```
 
 ### **List Installed Apps**
