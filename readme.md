@@ -26,6 +26,12 @@ I wanted a simple CLI tool I could use during app development to automate some p
 
 At any time, you can run `kosqi --help` to view available commands.
 
+### **Show Device Info**
+
+```
+kosqi device
+```
+
 ### **Get App Info**
 
 This returns metadata and the manifest for the provided app ID.
