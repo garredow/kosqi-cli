@@ -22,6 +22,19 @@ I wanted a simple CLI tool I could use during app development to automate some p
 - A KaiOS device in Debug mode
 - ADB. If you can run `adb devices` and see your KaiOS device, you're good to go.
 
+## Installation
+
+KOSQI is not available via NPM, but you can easily install it locally.
+
+```
+git clone https://github.com/garredow/kosqi-cli.git
+cd kosqi-cli
+npm run build
+npm link
+```
+
+The `kosqi` package is now available to use from the command line!
+
 ## How do I use it?
 
 At any time, you can run `kosqi --help` to view available commands.
