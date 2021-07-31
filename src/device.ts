@@ -1,4 +1,4 @@
-import FirefoxClient from 'firefox-client';
+import FirefoxClient from '@cliqz-oss/firefox-client';
 import { promisify } from 'util';
 import { DeviceActor, AppsActor, App, DeviceInfo } from './models';
 import { logger, getManifestUrl } from './util';
@@ -23,7 +23,7 @@ export class Device {
         this._deviceActor = await this.getDeviceActor();
         this._appsActor = await this.getWebappsActor();
 
-        resolve();
+        resolve(null);
       });
       this._client.on('error', (err: any) => {
         logger.error('Unable to connect to device');
@@ -135,6 +135,7 @@ export class Device {
 export async function useDevice(fn: Function) {
   const device = new Device();
   await device.connect();
-  await fn(device);
-  await device.disconnect();
+  const result = await fn(device);
+  device.disconnect();
+  return result;
 }

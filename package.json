@@ -16,7 +16,7 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^6.1.0",
-    "firefox-client": "0.3.0"
+    "@cliqz-oss/firefox-client": "0.3.1"
   },
   "devDependencies": {
     "@types/node": "^14.6.4",
